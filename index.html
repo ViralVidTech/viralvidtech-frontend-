@@ -692,6 +692,86 @@
         <div class="detector-grid" id="detectorResults"></div>
       </section>
 
+      <section class="panel detector-panel" id="videoCreation">
+        <h2 class="section-title" id="videoTitle">Video Creation</h2>
+        <p class="section-subtitle" id="videoSubtitle">Build 30 to 60 second faceless videos from your script with your own internal video engine.</p>
+
+        <div class="workspace" style="grid-template-columns: 0.95fr 1.05fr; gap:18px;">
+          <div class="result-card" style="display:grid; gap:14px;">
+            <div class="field">
+              <label for="videoType" id="videoTypeLabel">Video type</label>
+              <select id="videoType">
+                <option value="faceless-business">Faceless Business</option>
+                <option value="faceless-education">Faceless Education</option>
+                <option value="faceless-motivation">Faceless Motivation</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="videoDuration" id="videoDurationLabel">Duration</label>
+              <select id="videoDuration">
+                <option value="30">30 seconds</option>
+                <option value="45">45 seconds</option>
+                <option value="60">60 seconds</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="videoVoice" id="videoVoiceLabel">Voice style</label>
+              <select id="videoVoice">
+                <option value="clear-male">Clear Male</option>
+                <option value="clear-female">Clear Female</option>
+                <option value="energetic">Energetic</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="subtitleStyle" id="subtitleStyleLabel">Subtitle style</label>
+              <select id="subtitleStyle">
+                <option value="bold-center">Bold Center</option>
+                <option value="bottom-clean">Bottom Clean</option>
+                <option value="highlight-words">Highlight Words</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="templatePack" id="templatePackLabel">Template pack</label>
+              <select id="templatePack">
+                <option value="money">Money / Business</option>
+                <option value="ai">AI / Tech</option>
+                <option value="motivation">Motivation</option>
+              </select>
+            </div>
+
+            <div class="actions">
+              <button class="primary-btn" id="buildVideoPlanBtn">Build Video Plan</button>
+            </div>
+            <div class="status" id="videoStatus"></div>
+          </div>
+
+          <div class="result-card" style="display:grid; gap:14px;">
+            <h3 id="videoWorkflowTitle">Video Workflow Preview</h3>
+            <div class="result-card" style="background:rgba(255,255,255,0.03); padding:14px;">
+              <strong id="videoSpecTitle">Production spec</strong>
+              <p id="videoSpecText" style="margin:8px 0 0; color:var(--muted);">Vertical 9:16 video, 30–60 seconds, faceless structure, internal rendering pipeline, subtitle-ready.</p>
+            </div>
+            <div class="result-card" style="background:rgba(255,255,255,0.03); padding:14px;">
+              <strong id="scenePlanTitle">Scene plan</strong>
+              <ol id="scenePlanList" class="titles-list">
+                <li>Hook scene</li>
+                <li>Problem / opportunity scene</li>
+                <li>Solution / insight scene</li>
+                <li>CTA scene</li>
+              </ol>
+            </div>
+            <div class="result-card" style="background:rgba(255,255,255,0.03); padding:14px;">
+              <strong id="renderQueueTitle">Render queue</strong>
+              <p id="renderQueueText" style="margin:8px 0 0; color:var(--muted);">Next step: connect script + voice + subtitles + FFmpeg/MoviePy render worker.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="panel pricing-panel" id="pricing">
         <h2 class="section-title" id="pricingTitle">Pricing</h2>
         <p class="section-subtitle" id="pricingSubtitle">Launch with simple plans, then expand as your SaaS grows.</p>
@@ -778,6 +858,20 @@
         overviewTitle: 'Performance Overview', overviewSubtitle: 'A premium dashboard preview for revenue, growth, and viral momentum.', chartTitle: 'Revenue Trend', chartBadge: 'Live preview', miniStat1Label: 'Projected MRR', miniStat2Label: 'Top Niche', miniStat3Label: 'Growth Rate',
         activityTitle: 'Recent Activity', activitySubtitle: 'A clean SaaS-style feed for the next stage of the product.', activity1Title: 'Viral script generated', activity1Text: 'A new script was generated for the finance niche in English.', activity2Title: 'Trend alert triggered', activity2Text: 'A high-momentum content opportunity was detected in the AI niche.', activity3Title: 'Multilingual mode ready', activity3Text: 'Your interface is prepared for English, French, Spanish, and Portuguese.',
         detectorTitle: 'Viral Video Detector', detectorSubtitle: 'Scan by keyword, niche, and platform to surface high-potential video ideas.', detectorKeywordPlaceholder: 'AI money', scanBtn: 'Scan trends',
+        videoTitle: 'Video Creation',
+        videoSubtitle: 'Build 30 to 60 second faceless videos from your script with your own internal video engine.',
+        videoTypeLabel: 'Video type',
+        videoDurationLabel: 'Duration',
+        videoVoiceLabel: 'Voice style',
+        subtitleStyleLabel: 'Subtitle style',
+        templatePackLabel: 'Template pack',
+        buildVideoPlanBtn: 'Build Video Plan',
+        videoWorkflowTitle: 'Video Workflow Preview',
+        videoSpecTitle: 'Production spec',
+        videoSpecText: 'Vertical 9:16 video, 30–60 seconds, faceless structure, internal rendering pipeline, subtitle-ready.',
+        scenePlanTitle: 'Scene plan',
+        renderQueueTitle: 'Render queue',
+        renderQueueText: 'Next step: connect script + voice + subtitles + FFmpeg/MoviePy render worker.',
         pricingTitle: 'Pricing', pricingSubtitle: 'Launch with simple plans, then expand as your SaaS grows.',
         plan1Name: 'Starter', plan1f1: '50 script generations', plan1f2: 'Basic viral detector', plan1f3: '4 interface languages', plan1Btn: 'Choose Starter',
         plan2Name: 'Pro', plan2f1: 'Unlimited scripts', plan2f2: 'Advanced detector', plan2f3: 'Priority support', plan2Btn: 'Choose Pro',
@@ -799,6 +893,20 @@
         overviewTitle: 'Vue d’ensemble des performances', overviewSubtitle: 'Un aperçu premium du tableau de bord pour les revenus, la croissance et l’élan viral.', chartTitle: 'Tendance des revenus', chartBadge: 'Aperçu en direct', miniStat1Label: 'MRR projeté', miniStat2Label: 'Meilleure niche', miniStat3Label: 'Taux de croissance',
         activityTitle: 'Activité récente', activitySubtitle: 'Un flux propre de style SaaS pour la prochaine étape du produit.', activity1Title: 'Script viral généré', activity1Text: 'Un nouveau script a été généré pour la niche finance en anglais.', activity2Title: 'Alerte de tendance déclenchée', activity2Text: 'Une opportunité de contenu à forte dynamique a été détectée dans la niche IA.', activity3Title: 'Mode multilingue prêt', activity3Text: 'Ton interface est prête pour l’anglais, le français, l’espagnol et le portugais.',
         detectorTitle: 'Détecteur de vidéos virales', detectorSubtitle: 'Scanne par mot-clé, niche et plateforme pour faire remonter les idées de vidéos à fort potentiel.', detectorKeywordPlaceholder: 'IA argent', scanBtn: 'Scanner les tendances',
+        videoTitle: 'Création vidéo',
+        videoSubtitle: 'Construis des vidéos faceless de 30 à 60 secondes à partir de ton script avec ton propre moteur vidéo interne.',
+        videoTypeLabel: 'Type de vidéo',
+        videoDurationLabel: 'Durée',
+        videoVoiceLabel: 'Style de voix',
+        subtitleStyleLabel: 'Style de sous-titres',
+        templatePackLabel: 'Pack de template',
+        buildVideoPlanBtn: 'Construire le plan vidéo',
+        videoWorkflowTitle: 'Aperçu du workflow vidéo',
+        videoSpecTitle: 'Spécification de production',
+        videoSpecText: 'Vidéo verticale 9:16, 30–60 secondes, structure faceless, pipeline de rendu interne, sous-titres prêts.',
+        scenePlanTitle: 'Plan des scènes',
+        renderQueueTitle: 'File de rendu',
+        renderQueueText: 'Prochaine étape : connecter script + voix + sous-titres + worker de rendu FFmpeg/MoviePy.',
         pricingTitle: 'Tarifs', pricingSubtitle: 'Lance avec des plans simples, puis élargis ton SaaS au fur et à mesure.',
         plan1Name: 'Starter', plan1f1: '50 générations de scripts', plan1f2: 'Détecteur viral basique', plan1f3: '4 langues d’interface', plan1Btn: 'Choisir Starter',
         plan2Name: 'Pro', plan2f1: 'Scripts illimités', plan2f2: 'Détecteur avancé', plan2f3: 'Support prioritaire', plan2Btn: 'Choisir Pro',
@@ -809,7 +917,7 @@
       }
     };
 
-    const ids = ['brandSlogan','navMainLabel','navDashboard','navGenerator','navAnalytics','navLibrary','navSystemLabel','navBilling','navSettings','sideCardTitle','sideCardText','sideCardButton','headlineTitle','headlineText','apiStatusLabel','uiLanguageLabel','kpi1Label','kpi1Trend','kpi2Label','kpi2Trend','kpi3Label','kpi3Trend','kpi4Label','kpi4Trend','generatorTitle','generatorSubtitle','apiUrlLabel','nicheLabel','contentLanguageLabel','generateBtn','copyBtn','resultsTitle','resultsSubtitle','titlesHeading','scriptHeading','overviewTitle','overviewSubtitle','chartTitle','chartBadge','miniStat1Label','miniStat2Label','miniStat3Label','activityTitle','activitySubtitle','activity1Title','activity1Text','activity2Title','activity2Text','activity3Title','activity3Text','detectorTitle','detectorSubtitle','scanBtn','pricingTitle','pricingSubtitle','plan1Name','plan1f1','plan1f2','plan1f3','plan1Btn','plan2Name','plan2f1','plan2f2','plan2f3','plan2Btn','plan3Name','plan3f1','plan3f2','plan3f3','plan3Btn','loginTitle','loginSubtitle','authNameLabel','authEmailLabel','authPasswordLabel','loginBtn'];
+    const ids = ['brandSlogan','navMainLabel','navDashboard','navGenerator','navAnalytics','navLibrary','navSystemLabel','navBilling','navSettings','sideCardTitle','sideCardText','sideCardButton','headlineTitle','headlineText','apiStatusLabel','uiLanguageLabel','kpi1Label','kpi1Trend','kpi2Label','kpi2Trend','kpi3Label','kpi3Trend','kpi4Label','kpi4Trend','generatorTitle','generatorSubtitle','apiUrlLabel','nicheLabel','contentLanguageLabel','generateBtn','copyBtn','resultsTitle','resultsSubtitle','titlesHeading','scriptHeading','overviewTitle','overviewSubtitle','chartTitle','chartBadge','miniStat1Label','miniStat2Label','miniStat3Label','activityTitle','activitySubtitle','activity1Title','activity1Text','activity2Title','activity2Text','activity3Title','activity3Text','detectorTitle','detectorSubtitle','scanBtn','pricingTitle','pricingSubtitle','plan1Name','plan1f1','plan1f2','plan1f3','plan1Btn','plan2Name','plan2f1','plan2f2','plan2f3','plan2Btn','plan3Name','plan3f1','plan3f2','plan3f3','plan3Btn','loginTitle','loginSubtitle','authNameLabel','authEmailLabel','authPasswordLabel','loginBtn','videoTitle','videoSubtitle','videoTypeLabel','videoDurationLabel','videoVoiceLabel','subtitleStyleLabel','templatePackLabel','buildVideoPlanBtn','videoWorkflowTitle','videoSpecTitle','videoSpecText','scenePlanTitle','renderQueueTitle','renderQueueText'];
 
     const uiLanguage = document.getElementById('uiLanguage');
     const apiUrlInput = document.getElementById('apiUrl');
@@ -1036,6 +1144,43 @@
       setStatus(t.authLogout, 'success');
     }
 
+    const videoStatus = document.getElementById('videoStatus');
+    const buildVideoPlanBtn = document.getElementById('buildVideoPlanBtn');
+    const scenePlanList = document.getElementById('scenePlanList');
+    const videoDuration = document.getElementById('videoDuration');
+    const videoType = document.getElementById('videoType');
+    const videoVoice = document.getElementById('videoVoice');
+    const subtitleStyle = document.getElementById('subtitleStyle');
+    const templatePack = document.getElementById('templatePack');
+
+    function buildVideoPlan() {
+      const duration = videoDuration.value;
+      const type = videoType.value;
+      const voice = videoVoice.value;
+      const subtitles = subtitleStyle.value;
+      const template = templatePack.value;
+      const niche = nicheInput.value.trim() || 'general niche';
+
+      const scenes = duration === '60'
+        ? ['Hook scene', 'Problem scene', 'Opportunity scene', 'Main solution scene', 'Proof / reinforcement scene', 'CTA scene']
+        : duration === '45'
+        ? ['Hook scene', 'Problem scene', 'Solution scene', 'Proof scene', 'CTA scene']
+        : ['Hook scene', 'Problem / opportunity scene', 'Solution / insight scene', 'CTA scene'];
+
+      scenePlanList.innerHTML = '';
+      scenes.forEach((scene, index) => {
+        const li = document.createElement('li');
+        li.textContent = `${index + 1}. ${scene} — ${niche}`;
+        scenePlanList.appendChild(li);
+      });
+
+      const specText = `${duration}-second vertical 9:16 ${type} video, voice: ${voice}, subtitles: ${subtitles}, template: ${template}.`;
+      document.getElementById('videoSpecText').textContent = specText;
+      videoStatus.textContent = 'Video plan ready. Next we connect the internal render engine.';
+      videoStatus.className = 'status success';
+      addActivity('Video plan created', `A ${duration}-second ${type} video plan was prepared for ${niche}.`);
+    }
+
     const savedApiUrl = localStorage.getItem('viral_api_url');
     if (savedApiUrl) apiUrlInput.value = savedApiUrl;
     apiUrlInput.addEventListener('input', () => localStorage.setItem('viral_api_url', apiUrlInput.value.trim()));
@@ -1044,6 +1189,7 @@
     generateBtn.addEventListener('click', generateContent);
     copyBtn.addEventListener('click', copyScript);
     scanBtn.addEventListener('click', scanTrends);
+    buildVideoPlanBtn.addEventListener('click', buildVideoPlan);
     openLoginBtn.addEventListener('click', () => authModal.classList.add('open'));
     closeModalBtn.addEventListener('click', () => authModal.classList.remove('open'));
     loginBtn.addEventListener('click', loginUser);
